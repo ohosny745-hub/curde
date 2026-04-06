@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background: rgb(32, 31, 31);
+    color: #fff;
+    font-family: system-ui;
+}
+
+
+.crud{
+    width: 80%;
+    margin: auto;
+}
+
+
+.head{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background: rgb(17, 16, 16);
+    margin: 4px 0;
+    border-radius: 4px;
+    padding: 4px;
+    color: #fff;
+}
+
+input:focus{
+    background-color: black;
+    transform: scale(1.1);
+}
+
+.price input{
+    width: 20%;
+}
+
+#total{
+    background: rgb(126, 2, 2);
+    padding: 5px 2px;
+    border-radius: 4px;
+}
+
+#total::before{
+    content: 'Total: ';
+}
+
+button{
+    width: 100%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background: rgb(126, 2, 2);
+    color: #fff;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+button:hover{
+    background: rgb(185, 4, 4);
+    letter-spacing: 1px;
+}
+
+.btnsearch{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnsearch button{
+    width: 45%;
+}
+
+#deleteAll{
+    margin: 20px 0;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+table th{
+    text-transform: uppercase;
+}
+
+th,td{
+    padding: 5px;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px){
+
+    .crud{
+        width: 95%;
+    }
+
+    .head h2{
+        font-size: 22px;
+    }
+
+    .head p{
+        font-size: 12px;
+    }
+
+    input{
+        height: 35px;
+        font-size: 14px;
+    }
+
+    /* inputs price */
+    .price{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .price input{
+        width: 48%;
+    }
+
+    #total{
+        width: 100%;
+        text-align: center;
+    }
+
+    /* buttons */
+    button{
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .btnsearch{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btnsearch button{
+        width: 100%;
+    }
+
+    /* table responsive */
+    table{
+        font-size: 12px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td{
+        padding: 8px 5px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .crud{
+        width: 95%;
+        padding: 10px;
+    }
+
+    .head h2{
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .head p{
+        font-size: 11px;
+        color: #aaa;
+    }
+
+    /* inputs */
+    .price{
+    display: grid;
+    grid-template-columns: repeat(2, 140px); /* حجم ثابت */
+    justify-content: center; /* يخليهم في النص */
+    gap: 8px;
+}
+
+    input:focus{
+        transform: scale(1.03); /* أقل عشان الموبايل */
+    }
+
+    /* price layout احترافي */
+    .price{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+    }
+
+    .price input{
+        width: 100%;
+    }
+
+    #total{
+        grid-column: span 2;
+        text-align: center;
+        font-weight: bold;
+        padding: 8px;
+    }
+
+    /* count + category */
+    #count, #category{
+        width: 100%;
+    }
+
+    /* buttons */
+    button{
+        height: 38px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+
+    /* search buttons */
+    .btnsearch{
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .btnsearch button{
+        width: 100%;
+    }
+
+    /* delete all */
+    #deleteAll button{
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    /* table */
+    table{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 12px;
+        border-radius: 10px;
+    }
+
+    th{
+        font-size: 11px;
+    }
+
+    td{
+        font-size: 12px;
+    }
+
+    /* buttons جوه الجدول */
+    td button{
+        padding: 5px;
+        font-size: 11px;
+        border-radius: 6px;
+    }
+}
